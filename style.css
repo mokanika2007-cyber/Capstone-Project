@@ -1,0 +1,154 @@
+:root{
+  --bg:#fbf8f8;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#ff6b6b;
+  --accent-2:#ff9aa2;
+  --soft-shadow: 0 6px 20px rgba(18,24,40,0.07);
+  --radius:14px;
+  --container:1100px;
+  --gap:1.25rem;
+  --type-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family:var(--type-sans);
+  background:linear-gradient(180deg,var(--bg),#fff);
+  color:#111827;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  margin:0;
+}
+
+
+.container{
+  width:calc(100% - 2rem);
+  max-width:var(--container);
+  margin:0 auto;
+  padding:2rem 0;
+}
+
+
+
+.site-header{
+  background:rgba(255,255,255,0.85);
+  backdrop-filter: blur(6px);
+  position:sticky;
+  top:0;
+  z-index:40;
+  border-bottom:1px solid rgba(0,0,0,0.04);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.75rem 0}
+.logo{font-weight:700;color:var(--accent);font-size:1.25rem}
+.nav{display:flex;gap:1rem;align-items:center}
+.nav a{color:#374151;text-decoration:none;padding:.45rem 0;transition:color .18s}
+.nav a:hover{color:var(--accent)}
+.auth{display:flex;gap:0.5rem;align-items:center}
+
+
+.btn{
+  padding:.55rem .85rem;border-radius:999px;border:0;background:var(--card);box-shadow:var(--soft-shadow);
+  cursor:pointer;font-weight:600;
+}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff}
+.btn.ghost{background:transparent;border:1px solid rgba(0,0,0,0.06)}
+.btn.lg{padding:0.9rem 1.25rem}
+
+
+.hero{padding:3.5rem 0 1.5rem}
+.hero-grid{display:grid;grid-template-columns:1fr 460px;align-items:center;gap:2rem}
+.hero-text h1{font-size:2.25rem;margin-bottom:.5rem;line-height:1.05}
+.muted{color:var(--muted);max-width:46ch;margin-bottom:.75rem}
+.hero-media{text-align:right}
+.media-card{background:linear-gradient(90deg,#fff,rgba(255,250,250,0.9));border-radius:18px;padding:1rem;box-shadow:var(--soft-shadow);display:inline-block}
+.media-card img{width:420px;max-width:100%;border-radius:12px;display:block;}
+
+
+@keyframes hueShift{0%{filter:hue-rotate(0deg)}50%{filter:hue-rotate(20deg)}100%{filter:hue-rotate(0deg)}}
+
+
+.search-card{display:flex;gap:.6rem;background:var(--card);padding:.6rem;border-radius:12px;align-items:center;margin-top:1.1rem;box-shadow:var(--soft-shadow)}
+.search-card input{flex:1;padding:.7rem .9rem;border-radius:10px;border:0;outline:none;background:#f8fafc}
+.search-card select{padding:.55rem .6rem;border-radius:10px;border:0;background:#fff}
+.search-card button{padding:.55rem .8rem;border-radius:10px}
+
+
+.section{padding:2.25rem 0}
+.section h2{font-size:1.5rem;margin-bottom:1rem}
+
+
+.categories{display:flex;gap:1rem;flex-wrap:wrap}
+.cat{background:var(--card);padding:1rem 1.1rem;border-radius:12px;min-width:96px;display:flex;flex-direction:column;align-items:center;gap:.4rem;box-shadow:var(--soft-shadow);cursor:pointer;border:1px solid transparent;transition:transform .22s,box-shadow .2s}
+.cat:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(0,0,0,0.08)}
+.cat span{font-size:.9rem;color:var(--muted)}
+
+
+.grid{display:grid;gap:1rem}
+.restaurants-grid{grid-template-columns:repeat(4,1fr)}
+.project-card, .offer-card, .testimonial{background:var(--card);border-radius:12px;padding:1rem;box-shadow:var(--soft-shadow)}
+
+
+.rest-card{
+  border-radius:12px;overflow:hidden;background:var(--card);display:flex;flex-direction:column;
+  transition:transform .22s,box-shadow .22s;cursor:pointer;border:1px solid rgba(0,0,0,0.03);
+}
+.rest-card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(0,0,0,0.1)}
+.rest-thumb{height:140px;overflow:hidden}
+.rest-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.rest-body{padding:1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.rest-title{font-weight:700}
+.rest-meta{color:var(--muted);font-size:.9rem}
+.rest-rating{margin-top:auto;color:#f6ad55;font-weight:700;display:flex;align-items:center;gap:.5rem}
+
+
+.offers-section{background:linear-gradient(90deg,#fff3f3,#fff);padding:2.5rem 0}
+.offers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.offer-card{padding:1rem;border-radius:12px}
+
+
+.testimonials{display:flex;align-items:center;gap:1rem;position:relative}
+.test-track{display:flex;gap:1rem;overflow:hidden;flex:1}
+.testimonial{min-width:100%;padding:1.1rem;border-radius:12px;text-align:left}
+.nav-arrow{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:.5rem;border-radius:8px;cursor:pointer}
+
+
+.app-section{padding:2.5rem 0}
+.app-grid{display:grid;grid-template-columns:1fr 360px;gap:2rem;align-items:center}
+.app-art img{width:100%;border-radius:14px;box-shadow:var(--soft-shadow)}
+
+
+.site-footer{background:#111827;color:#fff;padding:2rem 0;margin-top:2rem}
+.footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.site-footer h3{color:#ffb3b3}
+.site-footer ul{list-style:none;padding-left:0}
+.copyright{padding:1.25rem 0;color:rgba(255,255,255,0.7);font-size:.9rem;text-align:center}
+
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(4,6,12,0.45);z-index:80}
+.modal.show{display:flex}
+.modal-content{background:var(--card);padding:1.25rem;border-radius:12px;width:min(720px,95%);position:relative;box-shadow:0 20px 60px rgba(2,6,23,0.3)}
+.modal-close{position:absolute;right:12px;top:10px;border:0;background:transparent;font-size:1.1rem;cursor:pointer}
+
+
+.center{text-align:center}
+
+
+@media (max-width:1024px){
+  .restaurants-grid{grid-template-columns:repeat(3,1fr)}
+  .hero-grid{grid-template-columns:1fr 360px}
+}
+@media (max-width:800px){
+  .hero-grid{grid-template-columns:1fr;row-gap:1.25rem;text-align:center}
+  .hero-media{text-align:center}
+  .restaurants-grid{grid-template-columns:repeat(2,1fr)}
+  .offers-grid{grid-template-columns:repeat(2,1fr)}
+  .app-grid{grid-template-columns:1fr}
+  .nav{display:none}
+  .header-inner{gap:.5rem}
+}
+@media (max-width:420px){
+  .restaurants-grid{grid-template-columns:1fr}
+  .categories{gap:.6rem}
+  .media-card img{width:100%}
+}
