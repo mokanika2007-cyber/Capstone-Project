@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Foodie — Delicious food delivered</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">Foodie</div>
+
+      <nav class="nav">
+        <a href="#categories">Categories</a>
+        <a href="#featured">Restaurants</a>
+        <a href="#offers">Offers</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#app">App</a>
+      </nav>
+
+      <div class="auth">
+        <button class="btn ghost">Login</button>
+        <button class="btn primary">Sign Up</button>
+      </div>
+    </div>
+  </header>
+
+  
+  <section class="hero" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Delicious food,<br />delivered to you</h1>
+        <p class="muted">Order from your favorite restaurants and get your meal delivered fast, fresh, and hot.</p>
+        <a class="btn primary lg" href="#featured">Order Now</a>
+
+        <div class="search-card" role="search">
+          <input id="searchInput" type="search" placeholder="Enter your location or restaurant" />
+          <select id="categorySelect">
+            <option value="all">All Categories</option>
+            <option value="Pizza">Pizza</option>
+            <option value="Burgers">Burgers</option>
+            <option value="Sushi">Sushi</option>
+            <option value="Indian">Indian</option>
+            <option value="Chinese">Chinese</option>
+            <option value="Desserts">Desserts</option>
+          </select>
+          <button id="searchBtn" class="btn">Search</button>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="media-card">
+          <img src="Recipe2.webp" alt="Food" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="categories" class="section container">
+    <h2>Browse by Category</h2>
+    <div class="categories" aria-hidden="false">
+      <button class="cat" data-cat="Pizza">🍕<span>Pizza</span></button>
+      <button class="cat" data-cat="Burgers">🍔<span>Burgers</span></button>
+      <button class="cat" data-cat="Sushi">🍣<span>Sushi</span></button>
+      <button class="cat" data-cat="Indian">🥘<span>Indian</span></button>
+      <button class="cat" data-cat="Chinese">🥡<span>Chinese</span></button>
+      <button class="cat" data-cat="Desserts">🧁<span>Desserts</span></button>
+    </div>
+  </section>
+
+  
+  <section id="featured" class="section container">
+    <h2>Featured Restaurants</h2>
+
+    <div id="restaurantsGrid" class="grid restaurants-grid">
+   
+    </div>
+
+    <div class="center">
+      <button id="loadMoreBtn" class="btn ghost">Load more</button>
+    </div>
+  </section>
+
+  
+  <section id="offers" class="section offers-section">
+    <div class="container">
+      <h2>Promo Offers</h2>
+      <div class="offers-grid">
+        <div class="offer-card">Get 30% OFF on your first order!</div>
+        <div class="offer-card">Free delivery on orders above $20</div>
+        <div class="offer-card">Buy 1 Get 1 Free on Burgers every Friday</div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="testimonials" class="section container">
+    <h2>What Our Customers Say</h2>
+
+    <div class="testimonials">
+      <button class="tprev nav-arrow" aria-label="previous testimonial">◀</button>
+      <div class="test-track" id="testTrack">
+        <blockquote class="testimonial">
+          <p>"Foodie makes ordering food so easy and quick! The delivery is always on time."</p>
+          <cite>— Sarah M.</cite>
+        </blockquote>
+
+        <blockquote class="testimonial">
+          <p>"Great selection of restaurants and amazing offers. Highly recommend!"</p>
+          <cite>— James L.</cite>
+        </blockquote>
+
+        <blockquote class="testimonial">
+          <p>"The app is super user-friendly and customer support is fantastic. Love Foodie!"</p>
+          <cite>— Priya S.</cite>
+        </blockquote>
+      </div>
+      <button class="tnext nav-arrow" aria-label="next testimonial">▶</button>
+    </div>
+  </section>
+
+ 
+  <section id="app" class="section app-section">
+    <div class="container app-grid">
+      <div>
+        <h2>Get the Foodie App</h2>
+        <p class="muted">Order food on the go! Download our app for exclusive app-only deals.</p>
+        <div class="store-links">
+          <a class="store" href="#" aria-label="google play">Google Play</a>
+          <a class="store" href="#" aria-label="apple app store">App Store</a>
+        </div>
+      </div>
+      <div class="app-art">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop" alt="App" />
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Cities Served</h3>
+        <ul>
+          <li>New York</li>
+          <li>Los Angeles</li>
+          <li>Chicago</li>
+          <li>Houston</li>
+          <li>Miami</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p>Email: support@foodie.com</p>
+        <p>Phone: +1 234 567 890</p>
+      </div>
+
+      <div>
+        <h3>Follow Us</h3>
+        <div class="socials">🌐 🧾 📷</div>
+      </div>
+    </div>
+
+    <div class="container copyright">
+      © 2025 Foodie. All rights reserved.
+    </div>
+  </footer>
+
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button id="modalClose" class="modal-close" aria-label="close">✖</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  
+</body>
+</html>
